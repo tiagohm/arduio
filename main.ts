@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import { LedHandler } from './src/led.handler.js'
+import { PinHandler } from './src/pin.handler.js'
 import { MqttBoardServer } from './src/server.js'
 
 dotenv.config()
@@ -24,3 +25,4 @@ server.on('error', (e) => {
 })
 
 server.register(new LedHandler())
+server.register(new PinHandler())
