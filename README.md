@@ -22,3 +22,19 @@ Represents any one pin on the physical board.
 * `pin/[pin]/attach`: Attach the pin and listen to events `button/[pin]/up`, `button/[pin]/down`, `button/[pin]/hold`.
 * `pin/[pin]/low`: Set the pin `LOW`.
 * `pin/[pin]/high`: Set the pin `HIGH`.
+
+### Button
+
+Represents a single Button attached to the physical board.
+
+* `button/[pin]/attach`: Attach the button and listen to event `pin/[pin]/value`.
+
+Parameters:
+
+| name       | type    | description                                                                      | default | required |
+|------------|---------|----------------------------------------------------------------------------------|---------|----------|
+| invert     | boolean | Invert the up and down values.                                                   | false   | no       |
+| isPullup   | boolean | Initialize as a pullup button.                                                   | false   | no       |
+| isPulldown | boolean | Initialize as a pulldown button.                                                 | false   | no       |
+| holdtime   | number  | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms   | no       |
+| debounce   | number  | Time in milliseconds to delay button events. Cleans up "noisy" state changes.    | 7ms     | no       |
