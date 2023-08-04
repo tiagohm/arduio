@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "dist",
+    "module": "ES2022",
+    "sourceMap": false,
+    "declaration": false,
+    "moduleResolution": "Node16",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "target": "ES2022",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2023"
+    ],
+    "useDefineForClassFields": false
+  },
+  "include": [
+    "src/**/*.ts",
+    "main.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
